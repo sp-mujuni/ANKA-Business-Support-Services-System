@@ -1,0 +1,6 @@
+register
+register name password(8 characters)
+register hadijah password(12345678) juice date_of_birth(04-08-2020)
+djkbsfcsnfadjn dvn dkindvkidi fjkcnkdodjwd dswswdjowsj
+csUVHDSIOADJEG0PGJ0 N FWJHDUIDHOUD W	SHWUDI 	WIAHDWO2
+register name(isham) password(234556) product juice date_of_birth(21-4-2001)
