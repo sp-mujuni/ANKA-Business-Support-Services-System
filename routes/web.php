@@ -24,10 +24,9 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/home', 'App\Http\Controllers\TestController@index')->name('home');
-Route::get('/about', 'App\Http\Controllers\TestController@about')->name('about');
-Route::get('/admin', 'App\Http\Controllers\TestController@admin')->name('admin');
-Route::get('/home/participants', 'App\Http\Controllers\ParticipantsController@index')->name('list_participants');
-Route::get('/home/products', 'App\Http\Controllers\ProductsController@index')->name('list_products');
-
-
+Route::group(['prefix'=>'home'], function(){
+    Route::get('/', 'App\Http\Controllers\ProductsController@index')->name('home');
+    Route::get('/cart', 'App\Http\Controllers\CartController@index')->name('list_cart');
+    Route::resource('/participants', '\App\Http\Controllers\Customers\ParticipantsController', ['as'=>'participants']);
+    Route::resource('/products', '\App\Http\Controllers\Customers\ProductsController', ['as'=>'products']);
+});
